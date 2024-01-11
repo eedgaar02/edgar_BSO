@@ -8,8 +8,18 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "ZenLoop";
+  src: url("../font/ZenLoop-Regular.ttf") format("woff2"), url("../font/ZenLoop-Regular.ttf") format("truetype");
+}
+:root {
+  /* Mode 1 */
+  /* colors */
+  --verde-claro: #b3e7b1;
+  --verde-flojo: #c1ecc2;
+  --verde-fuerte: #3abb47;
+  --verde-intermedio: #a1e19f;
+  --verde-original: #a1e19f;
+  --verde-oscuro: #73d373;
 }
 
 /* ******************************** */
