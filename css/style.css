@@ -8,8 +8,12 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "ZenLoop";
-  src: url("../font/ZenLoop-Regular.ttf") format("woff2"), url("../font/ZenLoop-Regular.ttf") format("truetype");
+  font-family: 'Zen Loop';
+  src: url('ZenLoop-Regular.woff2') format('woff2'),
+      url('ZenLoop-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 :root {
   /* Mode 1 */
@@ -27,3 +31,4 @@
 /* Colores */
 
 /* ******************************** */
+
