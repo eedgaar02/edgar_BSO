@@ -80,7 +80,7 @@ body{
 }
 .barra_progreso{
   display: flex;
-  height: 10px;
+  height: 2vh;
   border-radius: 20px;
 }
 .seg{
