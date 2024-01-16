@@ -4,34 +4,74 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressBar = document.getElementById("barra_progreso");
     let timerInterval;
 
-    function pre_inicio(){
+    function pre_inicio() {
+        // Mostrar la barra de carga durante 5 segundos antes de ejecutar la función_iniciar
+        preInicioInterval = setInterval(function () {
+            const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
+            progressBar.style.width = progressPercentage + "%";
 
+            if (secondsLeft <= 5) {
+                progressBar.style.backgroundColor = "#3ABB47";
+                document.getElementById("seg").innerHTML = secondsLeft;
+            }
+
+            if (secondsLeft === 0) {
+                clearInterval(preInicioInterval);
+                // Al finalizar el pre-inicio, ejecutar la función_iniciar
+                funcion_iniciar();
+            }
+
+            document.getElementById("instrucciones").innerHTML = "El ejercicio empieza en 5 segundos";
+            secondsLeft--;
+        }, 1000);
     }
 
     function funcion_iniciar() {
         secondsLeft = countdownSeconds;
-        
+
         timerInterval = setInterval(function () {
             const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
             progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 20) {
+            if (secondsLeft <= 5) {
                 progressBar.style.backgroundColor = "#3ABB47";
+                document.getElementById("seg").innerHTML = secondsLeft;
             }
 
             if (secondsLeft === 0) {
                 clearInterval(timerInterval);
+                funcion_mantener();
             }
 
-            document.getElementById("seg").innerHTML = secondsLeft;
             document.getElementById("instrucciones").innerHTML = "Inhala";
+            secondsLeft--;
+        }, 1000);
+    }
+
+    function funcion_mantener(){
+        secondsLeft = countdownSeconds;
+
+        keepInterval = setInterval(function () {
+            const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
+            progressBar.style.width = progressPercentage + "%";
+
+            if (secondsLeft <= 5) {
+                progressBar.style.backgroundColor = "#3ABB47";
+                document.getElementById("seg").innerHTML = secondsLeft;
+            }
+
+            if (secondsLeft === 0) {
+                clearInterval(keepInterval);
+            }
+
+            document.getElementById("instrucciones").innerHTML = "Mantén";
             secondsLeft--;
         }, 1000);
     }
 
     // Modificado: Función para detener la barra de carga llamada funcion_detener
     function funcion_detener() {
-        clearInterval(timerInterval);
+        clearInterval(keepInterval);
         // Puedes agregar aquí cualquier otra lógica que desees al detener la barra de carga
     }
 
@@ -44,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location.reload();
         } else {
             // Si no está en progreso, iniciar la barra de carga
-            funcion_iniciar();
+            pre_inicio();
         }
     });
 });

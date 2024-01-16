@@ -81,9 +81,6 @@ body{
 .barra_progreso{
   display: flex;
   height: 10px;
-  padding: 10px;
-  align-items: flex-start;
-  gap: 10px;
   border-radius: 20px;
 }
 .seg{
