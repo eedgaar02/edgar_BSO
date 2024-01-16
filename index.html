@@ -37,8 +37,8 @@
     
     <!-- Se cambia el tema de algunos navegadores -->
     <meta name="theme-color" content="#fafafa" />
-    <!-- Código de las plataformas de Análisis -->
-    <script></script>
+    <!-- Código JavaScript -->
+    <script src="js/scripts.js"></script>
     <!-- Scripts a cargar antes de la renderización -->
     <script src="preloader.js"></script>
   </head>
@@ -53,10 +53,13 @@
         <img class="logo" src="img/smartphone/BSOyS.webp" alt="">
 
         <!--Boton de inicio del ejercicio-->
-        <input class="inicio" type="button" value="Iniciar">
+        <input id="inicio" class="inicio" type="button" value="Iniciar">
 
         <!--Barra de progreso que mide el tiempo-->
-        <section class="barra_progreso"></section>
+        <section id="barra_progreso" class="barra_progreso"></section>
+        
+        <!--Segundos-->
+        <h4 id="seg" class="seg"></h4>
 
         <!--Intrucciones a dar al usuario-->
         <h3 class="intrucciones">Instrucciones al Iniciar</h3>

@@ -28,8 +28,8 @@ html{
 }
 body{
   display: flex;
-  width: 430px;
-  height: 932px;
+  flex-wrap: wrap;
+  flex-basis: 100%;
   flex-direction: column;
   align-items: center;
   background-color: var(--verde-flojo);
@@ -81,6 +81,7 @@ body{
 }
 .inicio:hover{
   box-shadow: 0 0 10px var(--verde-oscuro);
+  cursor: pointer;
 }
 .barra_progreso{
   display: flex;
@@ -90,7 +91,10 @@ body{
   align-items: flex-start;
   gap: 10px;
   border-radius: 20px;
-  background: linear-gradient(270deg, #3ABB47 0%, #A1E19F 100%);
+}
+.seg{
+  color: var(--verde-fuerte);
+  font-size: 1.5em;
 }
 .intrucciones{
   color: var(--VerdeFuerte, #3ABB47);
