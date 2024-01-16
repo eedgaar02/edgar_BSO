@@ -80,15 +80,17 @@ body{
 }
 .barra_progreso{
   display: flex;
-  height: 2vh;
+  height: 1vh;
   border-radius: 20px;
 }
 .seg{
   color: var(--verde-fuerte);
   font-size: 1.5em;
+  height: 5vh;
 }
 .intrucciones{
   color: var(--VerdeFuerte, #3ABB47);
   text-align: center;
   font-size: 2em;
+  height: 5vh;
 }
