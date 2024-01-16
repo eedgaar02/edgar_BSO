@@ -53,18 +53,19 @@ body{
 /*Main*/
 .cuerpo{
   display: flex;
-  padding: 30px 70px;
+  padding: 0px 30px 0px 30px;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
 }
 
 .inicio{
   display: flex;
+  width: 200px;
+  height: 200px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   border-radius: 50%;
   background-color: var(--verde-claro);
   border: 0;
@@ -79,8 +80,7 @@ body{
 }
 .barra_progreso{
   display: flex;
-  width: 286px;
-  height: 15px;
+  height: 10px;
   padding: 10px;
   align-items: flex-start;
   gap: 10px;

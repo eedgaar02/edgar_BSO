@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const countdownSeconds = 20;
+    const countdownSeconds = 5;
     let secondsLeft = countdownSeconds;
     const progressBar = document.getElementById("barra_progreso");
     let timerInterval;
 
     function pre_inicio(){
-        
+
     }
 
     function funcion_iniciar() {
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             document.getElementById("seg").innerHTML = secondsLeft;
+            document.getElementById("instrucciones").innerHTML = "Inhala";
             secondsLeft--;
         }, 1000);
     }
