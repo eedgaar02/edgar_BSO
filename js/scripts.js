@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let secondsLeft = countdownSeconds;
     const progressBar = document.getElementById("barra_progreso");
     let timerInterval;
+    let counter = 0;
+
 
     function pre_inicio() {
         // Mostrar la barra de carga durante 5 segundos antes de ejecutar la función_iniciar
@@ -111,8 +113,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (secondsLeft === 0) {
                 clearInterval(timerInterval);
-                // Al finalizar la función_mantener2, ejecutar la función_inicio
-                funcion_inicio();
+                counter++;
+                if(counter < 5){
+                    funcion_iniciar();
+                }
             }
 
         }, 1000);
