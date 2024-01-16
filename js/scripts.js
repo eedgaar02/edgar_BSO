@@ -4,9 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressBar = document.getElementById("barra_progreso");
     let timerInterval;
 
+    function pre_inicio(){
+        
+    }
+
     function funcion_iniciar() {
         secondsLeft = countdownSeconds;
-        progressBar.value = "Detener";
         
         timerInterval = setInterval(function () {
             const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
