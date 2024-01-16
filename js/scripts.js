@@ -10,8 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
             progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 20) {
+            if (secondsLeft <= 5) {
                 progressBar.style.backgroundColor = "#3ABB47";
+                document.getElementById("seg").innerHTML = secondsLeft;
+                document.getElementById("instrucciones").innerHTML = "Segundos para iniciar";
+                secondsLeft--;
             }
 
             if (secondsLeft === 0) {
@@ -20,9 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 funcion_iniciar();
             }
 
-            document.getElementById("seg").innerHTML = secondsLeft;
-            document.getElementById("instrucciones").innerHTML = "Inhala";
-            secondsLeft--;
         }, 1000);
     }
 
@@ -33,8 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
             progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 20) {
+            if (secondsLeft <= 5) {
                 progressBar.style.backgroundColor = "#3ABB47";
+                document.getElementById("seg").innerHTML = secondsLeft;
+                document.getElementById("instrucciones").innerHTML = "Inhala";
+                secondsLeft--;
             }
 
             if (secondsLeft === 0) {
@@ -43,9 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 funcion_mantener();
             }
 
-            document.getElementById("seg").innerHTML = secondsLeft;
-            document.getElementById("instrucciones").innerHTML = "Inhala";
-            secondsLeft--;
         }, 1000);
     }
 
@@ -56,8 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
             progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 20) {
+            if (secondsLeft <= 5) {
                 progressBar.style.backgroundColor = "#3ABB47";
+                document.getElementById("seg").innerHTML = secondsLeft;
+                document.getElementById("instrucciones").innerHTML = "Mantén";
+                secondsLeft--;
             }
 
             if (secondsLeft === 0) {
@@ -66,9 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 funcion_exhalar();
             }
 
-            document.getElementById("seg").innerHTML = secondsLeft;
-            document.getElementById("instrucciones").innerHTML = "Manteniendo";
-            secondsLeft--;
         }, 1000);
     }
 
@@ -79,8 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
             progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 20) {
+            if (secondsLeft <= 5) {
                 progressBar.style.backgroundColor = "#3ABB47";
+                document.getElementById("seg").innerHTML = secondsLeft;
+                document.getElementById("instrucciones").innerHTML = "Exhala";
+                secondsLeft--;
             }
 
             if (secondsLeft === 0) {
@@ -89,9 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 funcion_mantener2();
             }
 
-            document.getElementById("seg").innerHTML = secondsLeft;
-            document.getElementById("instrucciones").innerHTML = "Exhala";
-            secondsLeft--;
         }, 1000);
     }
 
@@ -102,8 +102,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
             progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 20) {
+            if (secondsLeft <= 5) {
                 progressBar.style.backgroundColor = "#3ABB47";
+                document.getElementById("seg").innerHTML = secondsLeft;
+                document.getElementById("instrucciones").innerHTML = "Mantén";
+                secondsLeft--;
             }
 
             if (secondsLeft === 0) {
@@ -112,9 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 funcion_inicio();
             }
 
-            document.getElementById("seg").innerHTML = secondsLeft;
-            document.getElementById("instrucciones").innerHTML = "Manteniendo2";
-            secondsLeft--;
         }, 1000);
     }
 
