@@ -41,7 +41,7 @@ body{
 /*Header*/
 .cabecera{
   display: flex;
-  padding: 5% 9% 2% 9%;
+  padding: 50px 96px 20px 96px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -55,19 +55,19 @@ body{
 /*Main*/
 .cuerpo{
   display: flex;
-  padding: 3% 7%;
+  padding: 30px 70px;
   flex-direction: column;
   align-items: center;
   gap: 60px;
 }
 .logo{
-  width: 70vw;
-  height: 15vh;
+  width: 276px;
+  height: 155px;
 }
 .inicio{
   display: flex;
-  width: 28vw;
-  height: 28vh;
+  width: 280px;
+  height: 280px;
   padding: 116px 0px;
   flex-direction: column;
   align-items: center;
