@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 progressBar.style.backgroundColor = "#3ABB47";
                 document.getElementById("seg").innerHTML = secondsLeft;
                 document.getElementById("instrucciones").innerHTML = "Segundos para iniciar";
+                document.getElementById("inicio").innerHTML = "Reiniciar";
                 secondsLeft--;
             }
 
