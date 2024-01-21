@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const countdownSeconds = 5;
+    const countdownSeconds = 4;
     let secondsLeft = countdownSeconds;
     const progressBar = document.getElementById("barra_progreso");
     let timerInterval;
@@ -9,19 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function pre_inicio() {
         // Mostrar la barra de carga durante 5 segundos antes de ejecutar la función_iniciar
         const preInicioInterval = setInterval(function () {
-            const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
-            progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 5) {
-                progressBar.style.backgroundColor = "#3ABB47";
+            if (secondsLeft <= 4) {
+                progressBar.style.animation = "carga 4s linear";
                 document.getElementById("seg").innerHTML = secondsLeft;
                 document.getElementById("instrucciones").innerHTML = "Segundos para iniciar";
                 document.getElementById("inicio").innerHTML = "Reiniciar";
                 secondsLeft--;
             }
 
-            if (secondsLeft === 0) {
+            if (secondsLeft === -1) {
                 clearInterval(preInicioInterval);
+                progressBar.style.animation = "";
                 // Al finalizar el pre-inicio, ejecutar la función_iniciar
                 funcion_iniciar();
             }
@@ -30,21 +29,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function funcion_iniciar() {
+
         secondsLeft = countdownSeconds;
 
         timerInterval = setInterval(function () {
-            const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
-            progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 5) {
-                progressBar.style.backgroundColor = "#3ABB47";
+            if (secondsLeft <= 4) {
+                
+                progressBar.style.animation = "carga 4s linear";
                 document.getElementById("seg").innerHTML = secondsLeft;
                 document.getElementById("instrucciones").innerHTML = "Inhala";
                 secondsLeft--;
             }
 
-            if (secondsLeft === 0) {
+            if (secondsLeft === -1) {
                 clearInterval(timerInterval);
+                progressBar.style.animation = "";
                 // Al finalizar la función_iniciar, ejecutar la función_mantener
                 funcion_mantener();
             }
@@ -56,18 +56,17 @@ document.addEventListener("DOMContentLoaded", function () {
         secondsLeft = countdownSeconds;
 
         timerInterval = setInterval(function () {
-            const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
-            progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 5) {
-                progressBar.style.backgroundColor = "#3ABB47";
+            if (secondsLeft <= 4) {
+                progressBar.style.animation = "carga 4s linear";
                 document.getElementById("seg").innerHTML = secondsLeft;
                 document.getElementById("instrucciones").innerHTML = "Mantén";
                 secondsLeft--;
             }
 
-            if (secondsLeft === 0) {
+            if (secondsLeft === -1) {
                 clearInterval(timerInterval);
+                progressBar.style.animation = "";
                 // Al finalizar la función_mantener, ejecutar la función_exhalar
                 funcion_exhalar();
             }
@@ -79,18 +78,17 @@ document.addEventListener("DOMContentLoaded", function () {
         secondsLeft = countdownSeconds;
 
         timerInterval = setInterval(function () {
-            const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
-            progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 5) {
-                progressBar.style.backgroundColor = "#3ABB47";
+            if (secondsLeft <= 4) {
+                progressBar.style.animation = "carga 4s linear";
                 document.getElementById("seg").innerHTML = secondsLeft;
                 document.getElementById("instrucciones").innerHTML = "Exhala";
                 secondsLeft--;
             }
 
-            if (secondsLeft === 0) {
+            if (secondsLeft === -1) {
                 clearInterval(timerInterval);
+                progressBar.style.animation = "";
                 // Al finalizar la función_exhalar, ejecutar la función_mantener2
                 funcion_mantener2();
             }
@@ -102,21 +100,23 @@ document.addEventListener("DOMContentLoaded", function () {
         secondsLeft = countdownSeconds;
 
         timerInterval = setInterval(function () {
-            const progressPercentage = ((countdownSeconds - secondsLeft) / countdownSeconds) * 100;
-            progressBar.style.width = progressPercentage + "%";
 
-            if (secondsLeft <= 5) {
-                progressBar.style.backgroundColor = "#3ABB47";
+            if (secondsLeft <= 4) {
+                progressBar.style.animation = "carga 4s linear";
                 document.getElementById("seg").innerHTML = secondsLeft;
                 document.getElementById("instrucciones").innerHTML = "Mantén";
                 secondsLeft--;
             }
 
-            if (secondsLeft === 0) {
+            if (secondsLeft === -1) {
                 clearInterval(timerInterval);
+                progressBar.style.animation = "";
                 counter++;
-                if(counter < 5){
+                if(counter < 18){
                     funcion_iniciar();
+                }else{
+                    document.getElementById("seg").innerHTML = "";
+                    document.getElementById("instrucciones").innerHTML = "Felicidades, esperamos que te hayas relajado";
                 }
             }
 

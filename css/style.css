@@ -85,6 +85,18 @@ body{
   height: 1vh;
   border-radius: 20px;
 }
+
+@keyframes carga{
+  0% {
+    width: 0%;
+    background-color: var(--verde-fuerte);
+  }
+  100%{
+    width: 100%;
+    background-color: var(--verde-fuerte);
+  }
+}
+
 .seg{
   color: var(--verde-fuerte);
   font-size: 1.5em;
