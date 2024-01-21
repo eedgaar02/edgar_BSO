@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function funcion_iniciar() {
+        
+        window.navigator.vibrate([1000]);
 
         secondsLeft = countdownSeconds;
 
@@ -53,6 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function funcion_mantener() {
+       
+        window.navigator.vibrate([1000]);
+
         secondsLeft = countdownSeconds;
 
         timerInterval = setInterval(function () {
@@ -75,6 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function funcion_exhalar() {
+
+        window.navigator.vibrate([1000]);
+
         secondsLeft = countdownSeconds;
 
         timerInterval = setInterval(function () {
@@ -97,6 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function funcion_mantener2() {
+
+        window.navigator.vibrate([1000]);
+
         secondsLeft = countdownSeconds;
 
         timerInterval = setInterval(function () {
